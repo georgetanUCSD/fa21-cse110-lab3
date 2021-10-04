@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/png" href="/favicon-16x16.png"/> -->
+    <link rel="icon" type="image/x-icon" href="favicon-16x16.ico"/>
+    <title>CSE110-Lab2</title>
+</head>
+<!-- 
+@a title (e.g. "Pomodoro Timer First Brainstorm")
+subtitle for the meeting section/the topic of the meeting (e.g. "brainstorming", "check-ins", "documentation")
+subtitle for the date
+attendance list
+agenda of what the meeting will cover
+things that were unfinished business from last meeting
+things that are new business that need to be talked about
+any miscellaneous comments / questions / concerns that anyone would like to bring up
+pictures of any diagrams / architecture / things that were presented
+SWE meetings often have people diagram things on a whiteboard so we want those captured as well
+For the following two, you can simply take a 30 second pretend audio recording & video recording to use, we are just trying to get you familiar with the <audio> and <video> elements. Yes, you must have both audio and video elements, and yes, you can use the audio from the video you took for the audio element, it just has to be in a separate audio file.
+audio recording the meeting
+video recording of the meeting -->
+
+<body>
+    <header>
+        <h1>HTML DISCUSSION MEETING</h1>
+        <h3><i>First meeting: HTML Base 10/3/2021</i></h3>
+        <nav>
+            <ul>
+                <li><a href="#AttendanceList">Attendance List</a></li>
+                <li><a href="#Agenda">Agenda</a></li>
+                <li><a href="#UnfinishedBusiness">Unfinished Business</a></li>
+                <li><a href="#NewBusiness">New Business</a></li>
+                <li><a href="#Comments/Questions/Concerns">Comments/Questions/Concerns</a></li>
+                <li><a href="#RelatedPictures">Related Pictures</a></li>
+                <li><a href="#Recording">Recording</a></li>
+                <li><a href="#Survey">Survey</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="AttendanceList">
+            <h2>Attendance List</h2>
+            <ol>
+                <li>Steve Jobs</li>
+                <li>Bill Gates</li>
+                <li>Larry Page</li>
+                <li>Mark Zuckerberg</li>
+            </ol>
+        </section>
+        <br>
+        <section id="Agenda">
+            <h2>Agenda</h2>
+            <ol>
+                <li>Content sectioning</li>
+                <li>Text content</li>
+                <li>Inline text semantics</li>
+                <li>Images and multimedia</li>
+            </ol>
+        </section>
+        <br>
+        <section id="UnfinishedBusiness">
+            <h2 >Unfinished Business</h2>
+            <ol>
+                <li>How to become a software engineer?</li>
+                <li>Should we do multitasking?</li>
+            </ol>
+            
+        </section>
+        <br>
+        <section id="NewBusiness">
+            <h2 >New Business</h2>
+            <p>What is a structural HTML?</p>
+            <img src="HTML_Structure.png" alt="HTMLStructure">
+
+
+
+
+        </section>
+        <br>
+        <section id="Comments/Questions/Concerns">
+            <h2 >Comments/Questions/Concerns</h2>
+            <div>
+                <details>
+                    <summary>What is HTML?</summary>
+                    <P>
+                        The <b>HyperText Markup Language, or HTML</b> is the standard markup language for documents <strong>designed to be displayed in a web browser.</strong>
+                        It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
+                    </P>
+                </details>
+
+            </div>
+            <hr>
+            <div>
+                <details>
+                    <summary>Differece between strong tag and b tag</summary>
+                    <p>
+                        The main difference between these two tag is that the strong tag semantically emphasizes on the important word or section of words 
+                        while the bold tag is just offset text conventionally styled in bold.
+                    </p>
+                </details>
+
+            </div>
+            <hr>
+            <div>
+                <details>
+                    <summary>Differece between i tag and em tag</summary>
+                    <p>
+                        The main difference between these two tag is that the em tag <em>semantically emphasizes</em> on the important word or section of words 
+                        while i tag is just offset text conventionally styled in italic to show alternative mood or voice.
+                    </p>
+                </details>
+
+
+            </div>
+
+        </section>
+        <br>
+        <section id="RelatedPictures">
+            <div>
+                <h2 >Related Pictures</h2>
+                <img src="logo.png" alt="html css js logos">
+            </div>
+            
+        </section>
+        <br>
+        <section id="Recording">
+            <h2 >Recording</h2>
+            <div>
+                <h3>Listen to this chill music before learning</h3>
+                <audio controls>
+                    <source src="Chill Background Music.mp3" type="audio/mpeg">
+                  
+                </audio>
+            </div>
+            <hr>
+            <div>
+                <h3>HTML tutorial</h3>
+                <video controls><source src="HTML Tutorial.mp4" type="video/mp4"></video>
+            </div>
+        </section>
+        <br>
+        <section id="Survey">
+            <h2 >Survey</h2>
+            <form action="/submitted.png">
+                <fieldset>
+                 <legend>Tell me what you like in this web:</legend>
+                 <label for="fname">Your irst name:</label>
+                 <input type="text" id="fname" name="fname"><br><br>
+
+                 <label for="lname">Your last name:</label>
+                 <input type="text" id="lname" name="lname"><br><br>
+
+                 <label for="email">Email:</label>
+                 <input type="email" id="email" name="email"><br><br>
+
+                 <label for="birthday">Birthday:</label>
+                 <input type="date" id="birthday" name="birthday"><br><br>
+
+                 <label for="role">Choose your role:</label>
+                 <input list="role"  name="role" />
+                 <datalist id="role">
+                     <option value="student">
+                     <option value="teacher">
+                 </datalist><br>
+
+                <p>How you like this page:</p>
+                <input type="radio" id="low" name="page_evaluation" value="low">
+                <label for="html">low</label><br>
+                <input type="radio" id="medium" name="page_evaluation" value="medium">
+                <label for="css">medium</label><br>
+                <input type="radio" id="high" name="page_evaluation" value="high">
+                <label for="javascript">high</label><br><br>
+
+                <label for="addtion_info">Addtional comment:</label><br>
+                <textarea id="addtion_info" name="addtion_info" rows="4" cols="50"></textarea><br><br>
+
+                 <input type="submit" value="Submit">
+                </fieldset>
+               </form>
+
+        </section>
+
+    </main>
+    <footer>
+        <div>&copy; Zhuoyu Tan @UCSD</div>
+    </footer>
+</body>
+
+</html>
