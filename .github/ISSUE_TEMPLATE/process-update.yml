@@ -5,6 +5,13 @@ assignees:
   - georgetanUCSD
 body:
   - type: textarea
+    id: Requirement
+    attributes:
+      label: Requirement
+    validations:
+      required: true
+      
+  - type: textarea
     id: whats-new
     attributes:
       label: What's new?
