@@ -1,0 +1,25 @@
+name: process-update
+description: describe current progress 
+title: "[update]: "
+assignees:
+  - georgetanUCSD
+body:
+  - type: textarea
+    id: whats-new
+    attributes:
+      label: What's new?
+      description: what kind of progress I made?
+      placeholder: enter here!
+      value: "new progress!"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: which part it is in Lab3?
+      multiple: true
+      options:
+        - Part 1
+        - Part 2
+
