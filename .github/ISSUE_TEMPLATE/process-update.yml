@@ -12,9 +12,9 @@ body:
       required: true
       
   - type: textarea
-    id: whats-new
+    id: comment
     attributes:
-      label: What's new?
+      label: comment
       description: what kind of progress I made?
       placeholder: enter here!
       value: "new progress!"
