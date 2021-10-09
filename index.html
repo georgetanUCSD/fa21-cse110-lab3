@@ -19,10 +19,9 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            Position: static;
         }
         header h1 {
-            background-color: #ddd;
+            background-color: rgb(221, 221, 221);
 
             margin-top: 5vh;
             margin-bottom: 5vh;
@@ -36,11 +35,14 @@
 
             border-style: solid;
             border-width: 0.3pc;
-            border-color: black;
+            border-color: hsl(0, 0%, 0%);
             border-radius: 25px;   
             
             text-align: center;
             color: black;
+
+            position:relative;
+            top:20px;
             
         }
 
@@ -48,9 +50,10 @@
             text-align: center;
             text-decoration: underline;
             margin-bottom: 50px;
+
         }
 
-        header nav{
+        header > nav{
             width: 100%;
             height: 50px;
             background-color: #333;
@@ -62,7 +65,6 @@
             flex-direction: row;
             align-items:stretch;
             justify-content:space-around;
-            position: sticky;
         }
         header nav a{
             float: left;
@@ -70,6 +72,9 @@
             text-align: center;
             padding: 14px 16px 14px 16px;
             text-decoration: none;
+
+            max-width: 150px;
+            min-width: 50px;
         }
 
         header nav a:hover{
@@ -84,11 +89,7 @@
             align-items:stretch;
             justify-content:space-around;
 
-
-            margin-top: 100px;
-            margin-bottom: 50px;
-            margin-right: 80px;
-            margin-left: 80px;
+            margin: 100px 50px 80px 80px;
         }
 
         #flexbox-container section{
@@ -107,6 +108,35 @@
             justify-items: center;
             border-style: solid;
         }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        a[href]:active{
+            background-color: yellow;
+        } 
+
+        ol,ul{
+            background-color: gray;
+        }
+
+        summary ~ p {
+            text-decoration: underline ;
+        }
+
+        h1 + h3 {
+            background-color: gray;
+        }
+        section.info{
+            border-radius: 25px;
+        }
+
+
+
+
 
         @media only screen and (max-width: 600px) {
             main {
@@ -148,9 +178,9 @@
 
     <main>
         <section id="flexbox-container">
-            <section id="AttendanceList">
+            <section class= "info" id="AttendanceList">
                 <h2>Attendance List</h2>
-                <ol>
+                <ul>
                     <li>Steve Jobs</li>
                     <li>Bill Gates</li>
                     <li>Larry Page</li>
@@ -158,7 +188,7 @@
                 </ol>
             </section>
 
-            <section id="Agenda">
+            <section class= "info" id="Agenda">
                 <h2>Agenda</h2>
                 <ol>
                     <li>Content sectioning</li>
@@ -168,7 +198,7 @@
                 </ol>
             </section>
 
-            <section id="UnfinishedBusiness">
+            <section  class= "info" id="UnfinishedBusiness">
                 <h2 >Unfinished Business</h2>
                 <ol>
                     <li>How to become a software engineer?</li>
@@ -176,7 +206,7 @@
                 </ol>
             </section>
 
-            <section id="NewBusiness">
+            <section class= "info" id="NewBusiness">
                 <h2 >New Business</h2>
                 <p>What is a structural HTML?</p>
             </section>
@@ -190,13 +220,13 @@
                     <details>
                         <summary>What is HTML?</summary>
                         <P>
-                            The <b>HyperText Markup Language, or HTML</b> is the standard markup language for documents <strong>designed to be displayed in a web browser.</strong>
+                            The <b style="display: block;">HyperText Markup Language, or HTML</b> is the standard markup language for documents <strong style="display: inline-block;">designed to be displayed in a web browser.</strong>
                             It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
                         </P>
                     </details>
 
                 </div>
-                <hr>
+
                 <div>
                     <details>
                         <summary>Differece between strong tag and b tag</summary>
@@ -207,7 +237,6 @@
                     </details>
 
                 </div>
-                <hr>
                 <div>
                     <details>
                         <summary>Differece between i tag and em tag</summary>
@@ -293,6 +322,7 @@
 
     </main>
     <footer>
+        <a href="https://georgetanucsd.github.io/fa21-cse110-lab3/">Lab3 public page</a>
         <div>&copy; Zhuoyu Tan @UCSD</div>
     </footer>
 </body>
