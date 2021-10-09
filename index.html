@@ -18,8 +18,8 @@
         header h1 {
             background-color: #ddd;
 
-            margin-top: 100px;
-            margin-bottom: 50px;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
             margin-right: 80px;
             margin-left: 80px;
 
@@ -49,10 +49,13 @@
             height: 50px;
             background-color: #333;
             color: white;
-            display: block;
+            display: flex;
             padding: 14px 16px 14px 16px;
             text-decoration: none;
             margin: auto;
+            flex-direction: row;
+            align-items:stretch;
+            justify-content:space-around;
         }
         header nav a{
             float: left;
@@ -66,6 +69,38 @@
             background-color: #ddd;
             color: black;
         }
+
+        #flexbox-container{
+            display: flex;
+            background-color: ddd;
+            flex-direction: row;
+            align-items:stretch;
+            justify-content:space-around;
+
+
+            margin-top: 100px;
+            margin-bottom: 50px;
+            margin-right: 80px;
+            margin-left: 80px;
+        }
+
+        #flexbox-container section{
+
+            border-style: solid;
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 50px;
+            justify-items: center;
+            border-style: solid;
+        }
+
 
 
     </style>
@@ -89,107 +124,109 @@
     </header>
 
     <main>
-        <section id="AttendanceList">
-            <h2>Attendance List</h2>
-            <ol>
-                <li>Steve Jobs</li>
-                <li>Bill Gates</li>
-                <li>Larry Page</li>
-                <li>Mark Zuckerberg</li>
-            </ol>
+        <section id="flexbox-container">
+            <section id="AttendanceList">
+                <h2>Attendance List</h2>
+                <ol>
+                    <li>Steve Jobs</li>
+                    <li>Bill Gates</li>
+                    <li>Larry Page</li>
+                    <li>Mark Zuckerberg</li>
+                </ol>
+            </section>
+
+            <section id="Agenda">
+                <h2>Agenda</h2>
+                <ol>
+                    <li>Content sectioning</li>
+                    <li>Text content</li>
+                    <li>Inline text semantics</li>
+                    <li>Images and multimedia</li>
+                </ol>
+            </section>
+
+            <section id="UnfinishedBusiness">
+                <h2 >Unfinished Business</h2>
+                <ol>
+                    <li>How to become a software engineer?</li>
+                    <li>Should we do multitasking?</li>
+                </ol>
+            </section>
+
+            <section id="NewBusiness">
+                <h2 >New Business</h2>
+                <p>What is a structural HTML?</p>
+            </section>
+
         </section>
-        <br>
-        <section id="Agenda">
-            <h2>Agenda</h2>
-            <ol>
-                <li>Content sectioning</li>
-                <li>Text content</li>
-                <li>Inline text semantics</li>
-                <li>Images and multimedia</li>
-            </ol>
+
+        <section class="grid-container">
+            <section id="Comments/Questions/Concerns">
+                <h2 >Comments/Questions/Concerns</h2>
+                <div>
+                    <details>
+                        <summary>What is HTML?</summary>
+                        <P>
+                            The <b>HyperText Markup Language, or HTML</b> is the standard markup language for documents <strong>designed to be displayed in a web browser.</strong>
+                            It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
+                        </P>
+                    </details>
+
+                </div>
+                <hr>
+                <div>
+                    <details>
+                        <summary>Differece between strong tag and b tag</summary>
+                        <p>
+                            The main difference between these two tag is that the strong tag semantically emphasizes on the important word or section of words 
+                            while the bold tag is just offset text conventionally styled in bold.
+                        </p>
+                    </details>
+
+                </div>
+                <hr>
+                <div>
+                    <details>
+                        <summary>Differece between i tag and em tag</summary>
+                        <p>
+                            The main difference between these two tag is that the em tag <em>semantically emphasizes</em> on the important word or section of words 
+                            while i tag is just offset text conventionally styled in italic to show alternative mood or voice.
+                        </p>
+                    </details>
+
+
+                </div>
+
+            </section>
+
+            <section id="RelatedPictures">
+                <div>
+                    <h2 >Related Pictures</h2>
+                    <img src="logo.png" alt="html css js logos">
+                </div>
+                
+            </section>
         </section>
-        <br>
-        <section id="UnfinishedBusiness">
-            <h2 >Unfinished Business</h2>
-            <ol>
-                <li>How to become a software engineer?</li>
-                <li>Should we do multitasking?</li>
-            </ol>
             
-        </section>
-        <br>
-        <section id="NewBusiness">
-            <h2 >New Business</h2>
-            <p>What is a structural HTML?</p>
-            <img src="HTML_Structure.png" alt="HTMLStructure">
 
-
-
-
-        </section>
-        <br>
-        <section id="Comments/Questions/Concerns">
-            <h2 >Comments/Questions/Concerns</h2>
-            <div>
-                <details>
-                    <summary>What is HTML?</summary>
-                    <P>
-                        The <b>HyperText Markup Language, or HTML</b> is the standard markup language for documents <strong>designed to be displayed in a web browser.</strong>
-                        It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
-                    </P>
-                </details>
-
-            </div>
-            <hr>
-            <div>
-                <details>
-                    <summary>Differece between strong tag and b tag</summary>
-                    <p>
-                        The main difference between these two tag is that the strong tag semantically emphasizes on the important word or section of words 
-                        while the bold tag is just offset text conventionally styled in bold.
-                    </p>
-                </details>
-
-            </div>
-            <hr>
-            <div>
-                <details>
-                    <summary>Differece between i tag and em tag</summary>
-                    <p>
-                        The main difference between these two tag is that the em tag <em>semantically emphasizes</em> on the important word or section of words 
-                        while i tag is just offset text conventionally styled in italic to show alternative mood or voice.
-                    </p>
-                </details>
-
-
-            </div>
-
-        </section>
-        <br>
-        <section id="RelatedPictures">
-            <div>
-                <h2 >Related Pictures</h2>
-                <img src="logo.png" alt="html css js logos">
-            </div>
-            
-        </section>
-        <br>
-        <section id="Recording">
+        <section  id="Recording">
             <h2 >Recording</h2>
-            <div>
-                <h3>Listen to this chill music before learning</h3>
-                <audio controls>
-                    <source src="Chill_Background_Music.mp3" type="audio/mpeg">
-                  
-                </audio>
-            </div>
-            <hr>
-            <div>
-                <h3>HTML tutorial</h3>
-                <video controls><source src="HTML_Tutorial.mp4" type="video/mp4"></video>
-            </div>
+            <section class="grid-container">
+                <div>
+                    <h3>Listen to this chill music before learning</h3>
+                    <audio controls>
+                        <source src="Chill_Background_Music.mp3" type="audio/mpeg">
+                      
+                    </audio>
+                </div>
+                <div>
+                    <h3>HTML tutorial</h3>
+                    <video controls><source src="HTML_Tutorial.mp4" type="video/mp4"></video>
+                </div>
+            </section>
+
         </section>
-        <br>
+
         <section id="Survey">
             <h2 >Survey</h2>
             <form action="/submitted.png">
